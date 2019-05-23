@@ -1,5 +1,5 @@
 # @summary 
-#   Module variables
+#   Operating system-related variables (and others)
 class apache::params {
   $install_ensure = 'present'
   case $::osfamily {
