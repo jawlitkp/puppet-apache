@@ -1,0 +1,15 @@
+steps:
+  - task: apache::ctl
+    target: rabbitheart2c.mylabserver.com
+    description: "Shuts down Apache service"
+    parameters:
+      command: graceful-stop
+  - command: "mkdir apache_logs && cp /etc/httpd/logs/*_log apache_logs/"
+    target: rabbitheart2c.mylabserver.com
+    description: "Create snapshop of apache log files and move to homedir"
+  - task: package
+    target: rabbitheart2c.mylabserver.com
+    description: "Uninstall Apache"
+    parameters:
+      action: uninstall
+      name: httpd 

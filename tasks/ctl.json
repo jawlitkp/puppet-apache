@@ -1,7 +1,7 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "Allows us to run apachectl commands on our host",
+  "description": "Allows us to run apachectl commands through Puppet",
   "parameters": {
     "command": {
       "description": "apachectl command to run",
