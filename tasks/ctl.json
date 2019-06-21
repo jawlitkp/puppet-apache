@@ -1,10 +1,10 @@
 {
   "puppet_task_version": 1,
   "supports_noop": false,
-  "description": "Allows us to run apachectl commands through Puppet",
+  "description": "Allows users to run the apachectl command through Puppet",
   "parameters": {
     "command": {
-      "description": "apachectl command to run",
+      "description": "Which apachectl command to run",
       "type": "Enum[start,stop,restart,status,graceful,graceful-stop]"
     }
   }
