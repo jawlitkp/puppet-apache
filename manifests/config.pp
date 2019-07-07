@@ -11,6 +11,6 @@ class apache::config {
   }
   @@host { "${hostname}":
     host_aliases => "$fqdn",
-    ip           => "$ipaddess",
+    ip           => "$ipaddress",
   }
 }
