@@ -23,7 +23,7 @@ Facter.add(:classification_hash) do
             region = nil
             env = nil
 
-            @subnets.each do |key, value|
+            subnets.each do |key, value|
                     if ip_addr_in_range?(value["low"], value["high"], ip)
                         classification_hash["provider"] = value["provider"]
                         classification_hash["region"] = value["region"]
