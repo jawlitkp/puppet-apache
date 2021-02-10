@@ -8,11 +8,11 @@ Facter.add(:classification_hash) do
         classification_hash = {}
         subnets = {
 					  "google_east_corp" => {
-											    "low"       => "10.161.56.0",
-												"high"      => "10.161.56.255",
-											    "provider"  => "datapipe",
+											    "low"       => "10.234.0.0",
+												"high"      => "10.234.255.255",
+											    "provider"  => "google",
 												"region"    => "east",
-												"env"       => "prod",
+												"env"       => "corp",
 										    }
 	                    }
 
