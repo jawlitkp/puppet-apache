@@ -9,7 +9,7 @@ def numeric_ip(ip_str)
     ip_str.split('.').inject(0) { |ip_num, part| ( ip_num << 8 ) + part.to_i }
 end
 
-def subnets = {
+subnets = {
         "google_east_corp" => {
                                 "low"       => "10.234.0.0",
                                 "high"      => "10.234.255.255",
@@ -21,7 +21,7 @@ def subnets = {
 
 Facter.add(:custom_facts) do    
     setcode do
-        def custom_facts = {}
+        custom_facts = {}
             ip = IPSocket.getaddress(Socket.gethostname)
             fqdn = Socket.gethostname
             hostname = fqdn.split(/[.\s]/)[0]            
